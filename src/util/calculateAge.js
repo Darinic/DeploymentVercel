@@ -10,11 +10,9 @@ export function calculateAge (date) {
     };
     console.log(DISPLAY_MONTHS)
     if (DISPLAY_MONTHS) {
-        return {
-            years: age,
-            months: month < 0 ? 12 + month : month
-        };
-    } else {
+        return age = `${age} years and ${month < 0 ? 12 + month : month} months`
+        }
+    else {
         return age;
     }
 };
