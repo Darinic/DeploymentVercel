@@ -1,4 +1,4 @@
-const DISPLAY_MONTHS = process.env.DISPLAY_MONTHS || false;
+const DISPLAY_MONTHS = process.env.REACT_APP_DISPLAY_MONTHS || false;
 
 export function calculateAge (date) {
     const today = new Date();
