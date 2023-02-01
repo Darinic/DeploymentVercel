@@ -8,6 +8,7 @@ export function calculateAge (date) {
     if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
         age--;
     };
+    console.log(DISPLAY_MONTHS)
     if (DISPLAY_MONTHS) {
         return {
             years: age,
