@@ -1,3 +1,5 @@
+const DISPLAY_MONTHS = process.env.DISPLAY_MONTHS || false;
+
 export function calculateAge (date) {
     const today = new Date();
     const birthDate = new Date(date);
@@ -6,7 +8,14 @@ export function calculateAge (date) {
     if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
         age--;
     };
-    return age;
+    if (DISPLAY_MONTHS) {
+        return {
+            years: age,
+            months: month < 0 ? 12 + month : month
+        };
+    } else {
+        return age;
+    }
 };
 
 export function validateAge (age) {
